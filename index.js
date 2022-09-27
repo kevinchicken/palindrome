@@ -40,7 +40,11 @@ function Phrase(content) {
 
     // Returns true for a palindrome, false otherwise.
     this.palindrome = function palindrome () {
-        return this.processedContent() === reverse(this.processedContent());
+        if(this.letters()){
+            return this.processedContent() === reverse(this.processedContent());
+        } else {
+            return false;
+        }
     }
 
     // Makes the phrase LOUDER.
